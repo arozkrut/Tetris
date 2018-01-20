@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomTetrominos.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+stdio.h
+-
+time.h
+-
+stdlib.h
+-
+

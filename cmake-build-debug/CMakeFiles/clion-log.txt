@@ -1,0 +1,4 @@
+/home/aleksandra/clion-2017.3.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug
