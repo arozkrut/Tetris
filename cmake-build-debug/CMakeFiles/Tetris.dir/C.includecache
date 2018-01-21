@@ -21,4 +21,6 @@ time.h
 -
 stdlib.h
 -
+ncurses.h
+-
 

@@ -3,8 +3,12 @@
 int main()
 {
     short int *blocks;
-    blocks=malloc(14*sizeof(short int));
-    NewBlocks(blocks);
-    for(int i=0;i<14;++i)printf("%d ", *(blocks+i));
+    blocks=(short int *)malloc(100*sizeof(short int));
+    struct Blocks *blocksCounter;
+    blocksCounter=initBlocksCounter();
+
+
+    NewBlocks(blocksCounter,blocks);
+    
     return 0;
 }
