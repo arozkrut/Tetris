@@ -2,13 +2,15 @@
 
 int main()
 {
-    short int *blocks;
-    blocks=(short int *)malloc(100*sizeof(short int));
-    struct Blocks *blocksCounter;
+    //time_t t;
+    //srand((unsigned) time(&t));
+
+    Display();
+
+    /*struct Blocks *blocksCounter;
     blocksCounter=initBlocksCounter();
 
+    short int block=NewBlock(blocksCounter);*/
 
-    NewBlocks(blocksCounter,blocks);
-    
     return 0;
 }

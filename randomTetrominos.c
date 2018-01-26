@@ -28,31 +28,25 @@
 
 #include "tetris.h"
 
-void NewBlocks(struct Blocks *blocksCounter, short int *blocks)
+short int NewBlock(struct Blocks *blocksCounter)
 {
-    time_t t;
-    srand((unsigned) time(&t));
-
-    for(int i=0;i<100;++i)
+    if(blocksCounter->betweenI==12)
     {
-        if(blocksCounter->betweenI==12)
-        {
-            blocksCounter->betweenI=0;
-            blocksCounter->successiveSZ=0;
-            printf("0 ");
-            *(blocks+i)=0;
-        }
-
-        if(blocksCounter->successiveSZ==4)*(blocks+i)=rand()%4;
-        else *(blocks+i)=rand()%7;
-
-        if(*(blocks+i)!=0)blocksCounter->betweenI+=1;
-        if(*(blocks+i)==5 || *(blocks+i)==6)blocksCounter->successiveSZ+=1;
-        else blocksCounter->successiveSZ=0;
-
-        printf("%d ", *(blocks+i));
+        blocksCounter->betweenI=0;
+        blocksCounter->successiveSZ=0;
+        return 0;
     }
 
+    short int block;
+
+    if(blocksCounter->successiveSZ==4)block=rand()%4;
+    else block=rand()%7;
+
+    if(block!=0)blocksCounter->betweenI+=1;
+    if(block==5 || block==6)blocksCounter->successiveSZ+=1;
+    else blocksCounter->successiveSZ=0;
+
+    return block;
 }
 
 struct Blocks* initBlocksCounter()

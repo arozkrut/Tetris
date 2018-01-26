@@ -123,6 +123,33 @@ Tetris/fast:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/build
 .PHONY : Tetris/fast
 
+display.o: display.c.o
+
+.PHONY : display.o
+
+# target to build an object file
+display.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/display.c.o
+.PHONY : display.c.o
+
+display.i: display.c.i
+
+.PHONY : display.i
+
+# target to preprocess a source file
+display.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/display.c.i
+.PHONY : display.c.i
+
+display.s: display.c.s
+
+.PHONY : display.s
+
+# target to generate assembly for a file
+display.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/display.c.s
+.PHONY : display.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -149,6 +176,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/main.c.s
 .PHONY : main.c.s
+
+menu.o: menu.c.o
+
+.PHONY : menu.o
+
+# target to build an object file
+menu.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/menu.c.o
+.PHONY : menu.c.o
+
+menu.i: menu.c.i
+
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/menu.c.i
+.PHONY : menu.c.i
+
+menu.s: menu.c.s
+
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/menu.c.s
+.PHONY : menu.c.s
 
 randomTetrominos.o: randomTetrominos.c.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Tetris"
+	@echo "... display.o"
+	@echo "... display.i"
+	@echo "... display.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... menu.o"
+	@echo "... menu.i"
+	@echo "... menu.s"
 	@echo "... randomTetrominos.o"
 	@echo "... randomTetrominos.i"
 	@echo "... randomTetrominos.s"

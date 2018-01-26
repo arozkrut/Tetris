@@ -12,5 +12,10 @@ struct Blocks
     short int successiveSZ;
 };
 
+void Display();
+
+short int ShowMenu();
+
 struct Blocks* initBlocksCounter();
-void NewBlocks(struct Blocks *blocksCounter, short int *blocks);
+short int NewBlock(struct Blocks *blocksCounter);
+
