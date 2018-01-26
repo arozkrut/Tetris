@@ -231,6 +231,33 @@ randomTetrominos.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomTetrominos.c.s
 .PHONY : randomTetrominos.c.s
 
+windows.o: windows.c.o
+
+.PHONY : windows.o
+
+# target to build an object file
+windows.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/windows.c.o
+.PHONY : windows.c.o
+
+windows.i: windows.c.i
+
+.PHONY : windows.i
+
+# target to preprocess a source file
+windows.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/windows.c.i
+.PHONY : windows.c.i
+
+windows.s: windows.c.s
+
+.PHONY : windows.s
+
+# target to generate assembly for a file
+windows.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/windows.c.s
+.PHONY : windows.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... randomTetrominos.o"
 	@echo "... randomTetrominos.i"
 	@echo "... randomTetrominos.s"
+	@echo "... windows.o"
+	@echo "... windows.i"
+	@echo "... windows.s"
 .PHONY : help
 
 

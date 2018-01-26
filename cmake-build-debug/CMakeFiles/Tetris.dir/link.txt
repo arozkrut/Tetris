@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Tetris.dir/main.c.o CMakeFiles/Tetris.dir/randomTetrominos.c.o  -o Tetris 
+/usr/bin/cc -lncurses -g   CMakeFiles/Tetris.dir/main.c.o CMakeFiles/Tetris.dir/randomTetrominos.c.o CMakeFiles/Tetris.dir/menu.c.o CMakeFiles/Tetris.dir/display.c.o CMakeFiles/Tetris.dir/windows.c.o  -o Tetris -lcurses /usr/lib/x86_64-linux-gnu/libform.so 

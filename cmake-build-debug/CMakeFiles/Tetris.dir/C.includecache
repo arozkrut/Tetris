@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
@@ -23,4 +31,8 @@ stdlib.h
 -
 ncurses.h
 -
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/windows.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 

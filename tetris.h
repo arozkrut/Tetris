@@ -15,6 +15,10 @@ struct Blocks
 void Display();
 
 short int ShowMenu();
+short int ShowMenuDuringGame();
+
+WINDOW *CreateWindow(int height, int width, int starty, int startx);
+void DestroyWindow(WINDOW *win);
 
 struct Blocks* initBlocksCounter();
 short int NewBlock(struct Blocks *blocksCounter);

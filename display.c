@@ -7,7 +7,10 @@
  *
  * 1-Menu
  * 2-Menu while playing
- * 3-Ranking
+ * 3-Game
+ * 4-New Game
+ * 5-Resume game
+ * 6-Ranking
  *-1-Exit
  */
 
@@ -20,6 +23,7 @@ void Display()
     noecho();
     cbreak();
     curs_set(0);
+    keypad(stdscr, TRUE);
 
     short int option=1;
     while(option!=-1)
@@ -33,7 +37,8 @@ void Display()
             }
             case 2:
             {
-
+                option=ShowMenuDuringGame();
+                break;
             }
             case 3:
             {
@@ -42,7 +47,7 @@ void Display()
         }
     }
 
-    clrtoeol();
+    //clrtoeol();
     refresh();
     endwin();
 

@@ -78,13 +78,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomTetrominos.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/windows.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/CMakeLists.txt">
