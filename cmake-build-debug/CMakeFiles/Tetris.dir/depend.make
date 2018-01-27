@@ -5,6 +5,7 @@ CMakeFiles/Tetris.dir/display.c.o: ../display.c
 CMakeFiles/Tetris.dir/display.c.o: ../tetris.h
 
 CMakeFiles/Tetris.dir/gameplay.c.o: ../gameplay.c
+CMakeFiles/Tetris.dir/gameplay.c.o: ../tetris.h
 
 CMakeFiles/Tetris.dir/main.c.o: ../main.c
 CMakeFiles/Tetris.dir/main.c.o: ../tetris.h

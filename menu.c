@@ -13,7 +13,7 @@
 
 #include "tetris.h"
 
-#define HEIGHT 10
+#define HEIGHT 9
 #define WIDTH 26
 void PrintMenu(WINDOW *menu, int backlit)
 {
