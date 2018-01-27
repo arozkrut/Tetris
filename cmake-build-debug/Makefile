@@ -150,6 +150,33 @@ display.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/display.c.s
 .PHONY : display.c.s
 
+gameplay.o: gameplay.c.o
+
+.PHONY : gameplay.o
+
+# target to build an object file
+gameplay.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/gameplay.c.o
+.PHONY : gameplay.c.o
+
+gameplay.i: gameplay.c.i
+
+.PHONY : gameplay.i
+
+# target to preprocess a source file
+gameplay.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/gameplay.c.i
+.PHONY : gameplay.c.i
+
+gameplay.s: gameplay.c.s
+
+.PHONY : gameplay.s
+
+# target to generate assembly for a file
+gameplay.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/gameplay.c.s
+.PHONY : gameplay.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -204,32 +231,32 @@ menu.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/menu.c.s
 .PHONY : menu.c.s
 
-randomTetrominos.o: randomTetrominos.c.o
+randomBlocks.o: randomBlocks.c.o
 
-.PHONY : randomTetrominos.o
+.PHONY : randomBlocks.o
 
 # target to build an object file
-randomTetrominos.c.o:
-	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomTetrominos.c.o
-.PHONY : randomTetrominos.c.o
+randomBlocks.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomBlocks.c.o
+.PHONY : randomBlocks.c.o
 
-randomTetrominos.i: randomTetrominos.c.i
+randomBlocks.i: randomBlocks.c.i
 
-.PHONY : randomTetrominos.i
+.PHONY : randomBlocks.i
 
 # target to preprocess a source file
-randomTetrominos.c.i:
-	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomTetrominos.c.i
-.PHONY : randomTetrominos.c.i
+randomBlocks.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomBlocks.c.i
+.PHONY : randomBlocks.c.i
 
-randomTetrominos.s: randomTetrominos.c.s
+randomBlocks.s: randomBlocks.c.s
 
-.PHONY : randomTetrominos.s
+.PHONY : randomBlocks.s
 
 # target to generate assembly for a file
-randomTetrominos.c.s:
-	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomTetrominos.c.s
-.PHONY : randomTetrominos.c.s
+randomBlocks.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomBlocks.c.s
+.PHONY : randomBlocks.c.s
 
 windows.o: windows.c.o
 
@@ -270,15 +297,18 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... gameplay.o"
+	@echo "... gameplay.i"
+	@echo "... gameplay.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... menu.o"
 	@echo "... menu.i"
 	@echo "... menu.s"
-	@echo "... randomTetrominos.o"
-	@echo "... randomTetrominos.i"
-	@echo "... randomTetrominos.s"
+	@echo "... randomBlocks.o"
+	@echo "... randomBlocks.i"
+	@echo "... randomBlocks.s"
 	@echo "... windows.o"
 	@echo "... windows.i"
 	@echo "... windows.s"

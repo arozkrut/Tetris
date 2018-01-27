@@ -6,11 +6,8 @@
  * Options:
  *
  * 1-Menu
- * 2-Menu while playing
- * 3-Game
- * 4-New Game
- * 5-Resume game
- * 6-Ranking
+ * 2-New Game
+ * 3-Ranking
  *-1-Exit
  */
 
@@ -22,13 +19,17 @@ void PrintMenu(WINDOW *menu, int backlit)
 {
     int x=2;
     int y=3;
-    box(menu, 0, 0);
 
     wattron(menu, A_BOLD);
+
+    box(menu, 0, 0);
+
     mvwaddch(menu,1,8,ACS_DIAMOND);
+    wattron(menu, A_UNDERLINE);
     mvwprintw(menu,1,10,"TETRIS");
+    wattroff(menu, A_UNDERLINE);
     mvwaddch(menu,1,17,ACS_DIAMOND);
-    wattroff(menu, A_BOLD);
+
 
     if(backlit==1)
     {
@@ -69,6 +70,7 @@ void PrintMenu(WINDOW *menu, int backlit)
         wattroff(menu, A_REVERSE);
     }
 
+    wattroff(menu, A_BOLD);
     wrefresh(menu);
 }
 
@@ -76,13 +78,16 @@ void PrintMenuDuringGame(WINDOW *menu,int backlit)
 {
     int x=2;
     int y=3;
-    box(menu, 0, 0);
 
     wattron(menu, A_BOLD);
+
+    box(menu, 0, 0);
+
     mvwaddch(menu,1,8,ACS_DIAMOND);
+    wattron(menu, A_UNDERLINE);
     mvwprintw(menu,1,10,"TETRIS");
+    wattroff(menu, A_UNDERLINE);
     mvwaddch(menu,1,17,ACS_DIAMOND);
-    wattroff(menu, A_BOLD);
 
     if(backlit==0)
     {
@@ -102,17 +107,21 @@ void PrintMenuDuringGame(WINDOW *menu,int backlit)
         wattroff(menu, A_REVERSE);
     }
 
+    wattroff(menu, A_BOLD);
     wrefresh(menu);
 }
 
 short int ShowMenu()
 {
-    WINDOW *menu=CreateWindow(HEIGHT, WIDTH, (24-HEIGHT)/2, (80-WIDTH)/2);
+    WINDOW *menu=CreateWindow(HEIGHT, WIDTH, (getmaxy(stdscr)-HEIGHT)/2, (getmaxx(stdscr)-WIDTH)/2);
     int backlit=1;
     int key;
 
+
     keypad(menu, TRUE);
-    refresh();
+    wattron(menu, COLOR_PAIR(9));
+
+    ClearWindow(menu, ' ');
 
     PrintMenu(menu, backlit);
 
@@ -143,20 +152,17 @@ short int ShowMenu()
                     case 1:
                     {
                         DestroyWindow(menu);
-                        return 4;
-                        break;
+                        return 2;
                     }
                     case 2:
                     {
                         DestroyWindow(menu);
-                        return 6;
-                        break;
+                        return 3;
                     }
                     case 3:
                     {
                         DestroyWindow(menu);
                         return -1;
-                        break;
                     }
                 }
                 break;
@@ -167,12 +173,14 @@ short int ShowMenu()
 
 short int ShowMenuDuringGame()
 {
-    WINDOW *menu=CreateWindow(HEIGHT, WIDTH, (24-HEIGHT)/2, (80-WIDTH)/2);
+    WINDOW *menu=CreateWindow(HEIGHT, WIDTH, (getmaxy(stdscr)-HEIGHT)/2, (getmaxx(stdscr)-WIDTH)/2);
     int backlit=0;
     int key;
 
     keypad(menu, TRUE);
-    refresh();
+    wattron(menu, COLOR_PAIR(9));
+
+    ClearWindow(menu, ' ');
 
     PrintMenuDuringGame(menu, backlit);
 

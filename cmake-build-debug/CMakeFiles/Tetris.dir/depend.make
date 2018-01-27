@@ -4,14 +4,16 @@
 CMakeFiles/Tetris.dir/display.c.o: ../display.c
 CMakeFiles/Tetris.dir/display.c.o: ../tetris.h
 
+CMakeFiles/Tetris.dir/gameplay.c.o: ../gameplay.c
+
 CMakeFiles/Tetris.dir/main.c.o: ../main.c
 CMakeFiles/Tetris.dir/main.c.o: ../tetris.h
 
 CMakeFiles/Tetris.dir/menu.c.o: ../menu.c
 CMakeFiles/Tetris.dir/menu.c.o: ../tetris.h
 
-CMakeFiles/Tetris.dir/randomTetrominos.c.o: ../randomTetrominos.c
-CMakeFiles/Tetris.dir/randomTetrominos.c.o: ../tetris.h
+CMakeFiles/Tetris.dir/randomBlocks.c.o: ../randomBlocks.c
+CMakeFiles/Tetris.dir/randomBlocks.c.o: ../tetris.h
 
 CMakeFiles/Tetris.dir/windows.c.o: ../tetris.h
 CMakeFiles/Tetris.dir/windows.c.o: ../windows.c

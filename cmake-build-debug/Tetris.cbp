@@ -81,13 +81,16 @@
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c">
 			<Option target="Tetris"/>
 		</Unit>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/gameplay.c">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c">
 			<Option target="Tetris"/>
 		</Unit>
-		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomTetrominos.c">
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomBlocks.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h">

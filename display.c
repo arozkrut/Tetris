@@ -6,11 +6,8 @@
  * Options:
  *
  * 1-Menu
- * 2-Menu while playing
- * 3-Game
- * 4-New Game
- * 5-Resume game
- * 6-Ranking
+ * 2-New Game
+ * 3-Ranking
  *-1-Exit
  */
 
@@ -19,11 +16,18 @@
 void Display()
 {
     initscr();
+    start_color();
     clear();
     noecho();
     cbreak();
     curs_set(0);
     keypad(stdscr, TRUE);
+
+    InitColors();
+    attron(COLOR_PAIR(9));
+
+    ClearWindow(stdscr, ACS_DIAMOND);
+    refresh();
 
     short int option=1;
     while(option!=-1)
@@ -37,7 +41,8 @@ void Display()
             }
             case 2:
             {
-                option=ShowMenuDuringGame();
+                ClearWindow(stdscr, ' ');
+                option=NewGame();
                 break;
             }
             case 3:
@@ -45,7 +50,12 @@ void Display()
 
             }
         }
+
+        ClearWindow(stdscr, ACS_DIAMOND);
+
     }
+
+    //mvaddch(i,j,ACS_CKBOARD);
 
     //clrtoeol();
     refresh();

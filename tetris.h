@@ -17,8 +17,13 @@ void Display();
 short int ShowMenu();
 short int ShowMenuDuringGame();
 
+short int NewGame();
+
 WINDOW *CreateWindow(int height, int width, int starty, int startx);
 void DestroyWindow(WINDOW *win);
+
+void InitColors();
+void ClearWindow(WINDOW *win, const chtype ch);
 
 struct Blocks* initBlocksCounter();
 short int NewBlock(struct Blocks *blocksCounter);

@@ -10,6 +10,8 @@
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/gameplay.c
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
@@ -18,7 +20,7 @@ tetris.h
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
-/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomTetrominos.c
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomBlocks.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 

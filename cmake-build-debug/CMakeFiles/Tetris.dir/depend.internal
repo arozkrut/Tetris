@@ -4,14 +4,16 @@
 CMakeFiles/Tetris.dir/display.c.o
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+CMakeFiles/Tetris.dir/gameplay.c.o
+ /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/gameplay.c
 CMakeFiles/Tetris.dir/main.c.o
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/main.c
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 CMakeFiles/Tetris.dir/menu.c.o
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
-CMakeFiles/Tetris.dir/randomTetrominos.c.o
- /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomTetrominos.c
+CMakeFiles/Tetris.dir/randomBlocks.c.o
+ /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomBlocks.c
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 CMakeFiles/Tetris.dir/windows.c.o
  /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
