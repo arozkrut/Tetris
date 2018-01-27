@@ -35,7 +35,7 @@ void PrepareNewGame(WINDOW *matrix, WINDOW *nextWin, WINDOW *scoreWin)
     attron(A_BOLD);
 
     mvprintw(getmaxy(stdscr)/2-1,getmaxx(stdscr)/2-11,"PRESS SOME KEY TO START");
-    getch();
+    
     //attron(COLOR_PAIR(8));
     mvprintw(getmaxy(stdscr)/2-1,getmaxx(stdscr)/2-11,"                       ");
     //attron(COLOR_PAIR(9));
