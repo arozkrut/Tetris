@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tetris.dir/display.c.o"
   "CMakeFiles/Tetris.dir/windows.c.o"
   "CMakeFiles/Tetris.dir/gameplay.c.o"
+  "CMakeFiles/Tetris.dir/possibleMoves.c.o"
+  "CMakeFiles/Tetris.dir/drawing.c.o"
+  "CMakeFiles/Tetris.dir/matrix.c.o"
   "Tetris.pdb"
   "Tetris"
 )

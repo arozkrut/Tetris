@@ -201,6 +201,78 @@ CMakeFiles/Tetris.dir/gameplay.c.o.provides: CMakeFiles/Tetris.dir/gameplay.c.o.
 CMakeFiles/Tetris.dir/gameplay.c.o.provides.build: CMakeFiles/Tetris.dir/gameplay.c.o
 
 
+CMakeFiles/Tetris.dir/possibleMoves.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/possibleMoves.c.o: ../possibleMoves.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Tetris.dir/possibleMoves.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/possibleMoves.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/possibleMoves.c
+
+CMakeFiles/Tetris.dir/possibleMoves.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/possibleMoves.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/possibleMoves.c > CMakeFiles/Tetris.dir/possibleMoves.c.i
+
+CMakeFiles/Tetris.dir/possibleMoves.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/possibleMoves.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/possibleMoves.c -o CMakeFiles/Tetris.dir/possibleMoves.c.s
+
+CMakeFiles/Tetris.dir/possibleMoves.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/possibleMoves.c.o.requires
+
+CMakeFiles/Tetris.dir/possibleMoves.c.o.provides: CMakeFiles/Tetris.dir/possibleMoves.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/possibleMoves.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/possibleMoves.c.o.provides
+
+CMakeFiles/Tetris.dir/possibleMoves.c.o.provides.build: CMakeFiles/Tetris.dir/possibleMoves.c.o
+
+
+CMakeFiles/Tetris.dir/drawing.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/drawing.c.o: ../drawing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Tetris.dir/drawing.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/drawing.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/drawing.c
+
+CMakeFiles/Tetris.dir/drawing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/drawing.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/drawing.c > CMakeFiles/Tetris.dir/drawing.c.i
+
+CMakeFiles/Tetris.dir/drawing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/drawing.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/drawing.c -o CMakeFiles/Tetris.dir/drawing.c.s
+
+CMakeFiles/Tetris.dir/drawing.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/drawing.c.o.requires
+
+CMakeFiles/Tetris.dir/drawing.c.o.provides: CMakeFiles/Tetris.dir/drawing.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/drawing.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/drawing.c.o.provides
+
+CMakeFiles/Tetris.dir/drawing.c.o.provides.build: CMakeFiles/Tetris.dir/drawing.c.o
+
+
+CMakeFiles/Tetris.dir/matrix.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/matrix.c.o: ../matrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Tetris.dir/matrix.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/matrix.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/matrix.c
+
+CMakeFiles/Tetris.dir/matrix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/matrix.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/matrix.c > CMakeFiles/Tetris.dir/matrix.c.i
+
+CMakeFiles/Tetris.dir/matrix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/matrix.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/matrix.c -o CMakeFiles/Tetris.dir/matrix.c.s
+
+CMakeFiles/Tetris.dir/matrix.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/matrix.c.o.requires
+
+CMakeFiles/Tetris.dir/matrix.c.o.provides: CMakeFiles/Tetris.dir/matrix.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/matrix.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/matrix.c.o.provides
+
+CMakeFiles/Tetris.dir/matrix.c.o.provides.build: CMakeFiles/Tetris.dir/matrix.c.o
+
+
 # Object files for target Tetris
 Tetris_OBJECTS = \
 "CMakeFiles/Tetris.dir/main.c.o" \
@@ -208,7 +280,10 @@ Tetris_OBJECTS = \
 "CMakeFiles/Tetris.dir/menu.c.o" \
 "CMakeFiles/Tetris.dir/display.c.o" \
 "CMakeFiles/Tetris.dir/windows.c.o" \
-"CMakeFiles/Tetris.dir/gameplay.c.o"
+"CMakeFiles/Tetris.dir/gameplay.c.o" \
+"CMakeFiles/Tetris.dir/possibleMoves.c.o" \
+"CMakeFiles/Tetris.dir/drawing.c.o" \
+"CMakeFiles/Tetris.dir/matrix.c.o"
 
 # External object files for target Tetris
 Tetris_EXTERNAL_OBJECTS =
@@ -219,11 +294,14 @@ Tetris: CMakeFiles/Tetris.dir/menu.c.o
 Tetris: CMakeFiles/Tetris.dir/display.c.o
 Tetris: CMakeFiles/Tetris.dir/windows.c.o
 Tetris: CMakeFiles/Tetris.dir/gameplay.c.o
+Tetris: CMakeFiles/Tetris.dir/possibleMoves.c.o
+Tetris: CMakeFiles/Tetris.dir/drawing.c.o
+Tetris: CMakeFiles/Tetris.dir/matrix.c.o
 Tetris: CMakeFiles/Tetris.dir/build.make
 Tetris: /usr/lib/x86_64-linux-gnu/libcurses.so
 Tetris: /usr/lib/x86_64-linux-gnu/libform.so
 Tetris: CMakeFiles/Tetris.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Tetris"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable Tetris"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tetris.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -237,6 +315,9 @@ CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/menu.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/display.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/windows.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/gameplay.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/possibleMoves.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/drawing.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/matrix.c.o.requires
 
 .PHONY : CMakeFiles/Tetris.dir/requires
 

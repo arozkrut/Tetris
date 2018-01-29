@@ -41,7 +41,7 @@ WINDOW *CreateWindow(int height, int width, int starty, int startx)
     return win;
 }
 
-void ClearWindow(WINDOW *win, const chtype ch)
+void ClearWindow(WINDOW *win, const chtype character)
 {
     int maxx;
     int maxy;
@@ -51,7 +51,7 @@ void ClearWindow(WINDOW *win, const chtype ch)
     {
         for(int j=0;j<=maxx;++j)
         {
-            mvwaddch(win,i,j,ch);
+            mvwaddch(win,i,j,character);
         }
     }
 

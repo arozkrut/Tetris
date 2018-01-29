@@ -10,6 +10,10 @@
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/drawing.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/gameplay.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
@@ -18,7 +22,15 @@ tetris.h
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/matrix.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/possibleMoves.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
@@ -34,6 +46,8 @@ time.h
 stdlib.h
 -
 ncurses.h
+-
+stdbool.h
 -
 
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/windows.c

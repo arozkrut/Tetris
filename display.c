@@ -41,8 +41,11 @@ void Display()
             }
             case 2:
             {
+                attron(COLOR_PAIR(8));
                 ClearWindow(stdscr, ' ');
                 option=NewGame();
+                attron(COLOR_PAIR(9));
+                cbreak();
                 break;
             }
             case 3:

@@ -150,6 +150,33 @@ display.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/display.c.s
 .PHONY : display.c.s
 
+drawing.o: drawing.c.o
+
+.PHONY : drawing.o
+
+# target to build an object file
+drawing.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/drawing.c.o
+.PHONY : drawing.c.o
+
+drawing.i: drawing.c.i
+
+.PHONY : drawing.i
+
+# target to preprocess a source file
+drawing.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/drawing.c.i
+.PHONY : drawing.c.i
+
+drawing.s: drawing.c.s
+
+.PHONY : drawing.s
+
+# target to generate assembly for a file
+drawing.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/drawing.c.s
+.PHONY : drawing.c.s
+
 gameplay.o: gameplay.c.o
 
 .PHONY : gameplay.o
@@ -204,6 +231,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/main.c.s
 .PHONY : main.c.s
 
+matrix.o: matrix.c.o
+
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/matrix.c.o
+.PHONY : matrix.c.o
+
+matrix.i: matrix.c.i
+
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/matrix.c.i
+.PHONY : matrix.c.i
+
+matrix.s: matrix.c.s
+
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/matrix.c.s
+.PHONY : matrix.c.s
+
 menu.o: menu.c.o
 
 .PHONY : menu.o
@@ -230,6 +284,33 @@ menu.s: menu.c.s
 menu.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/menu.c.s
 .PHONY : menu.c.s
+
+possibleMoves.o: possibleMoves.c.o
+
+.PHONY : possibleMoves.o
+
+# target to build an object file
+possibleMoves.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/possibleMoves.c.o
+.PHONY : possibleMoves.c.o
+
+possibleMoves.i: possibleMoves.c.i
+
+.PHONY : possibleMoves.i
+
+# target to preprocess a source file
+possibleMoves.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/possibleMoves.c.i
+.PHONY : possibleMoves.c.i
+
+possibleMoves.s: possibleMoves.c.s
+
+.PHONY : possibleMoves.s
+
+# target to generate assembly for a file
+possibleMoves.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/possibleMoves.c.s
+.PHONY : possibleMoves.c.s
 
 randomBlocks.o: randomBlocks.c.o
 
@@ -297,15 +378,24 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... drawing.o"
+	@echo "... drawing.i"
+	@echo "... drawing.s"
 	@echo "... gameplay.o"
 	@echo "... gameplay.i"
 	@echo "... gameplay.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 	@echo "... menu.o"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... possibleMoves.o"
+	@echo "... possibleMoves.i"
+	@echo "... possibleMoves.s"
 	@echo "... randomBlocks.o"
 	@echo "... randomBlocks.i"
 	@echo "... randomBlocks.s"
