@@ -3,6 +3,7 @@
 //
 #include "tetris.h"
 
+
 /* I XXXX    0
  *
  * J X       1
@@ -28,8 +29,8 @@
 
 void DestroyWindow(WINDOW *win)
 {
-    wborder(win, ' ', ' ', ' ',' ',' ',' ',' ',' ');
-    ClearWindow(win, ' ');
+    wborder(win, ' ', ' ', ' ',' ',' ',' ',' ',' ');                     /* czyscimy krawedzie okna */
+    ClearWindow(win, ' ');                                               /* czyscimy reszte okna */
     wrefresh(win);
     delwin(win);
 }
@@ -54,6 +55,56 @@ void ClearWindow(WINDOW *win, const chtype character)
             mvwaddch(win,i,j,character);
         }
     }
+    wrefresh(win);
+}
+
+void SaveWindows(WINDOW *matrix, WINDOW *nextWin, WINDOW *scoreWin)
+{
+    FILE *matrixFile;                                               /* zapisujemy stan okien do plikow */
+    FILE *nextWinFile;
+    FILE *scoreWinFile;
+
+    matrixFile=fopen( MATRIXWINFILE, "w");
+    nextWinFile=fopen( NEXTWINFILE, "w");
+    scoreWinFile= fopen( SCOREWINFILE, "w");
+
+    putwin(matrix, matrixFile);
+    putwin(nextWin, nextWinFile);
+    putwin(scoreWin, scoreWinFile);
+
+    fclose(matrixFile);
+    fclose(nextWinFile);
+    fclose(scoreWinFile);
+
+}
+
+void RefreshWindows(WINDOW *matrix, WINDOW *nextWin, WINDOW *scoreWin)
+{
+    FILE *matrixFile;                                           /* odczytujemy stan okien z pliku i je odswiezamy */
+    FILE *nextWinFile;
+    FILE *scoreWinFile;
+
+    matrixFile=fopen( MATRIXWINFILE, "r");
+    nextWinFile=fopen( NEXTWINFILE, "r");
+    scoreWinFile= fopen( SCOREWINFILE, "r");
+
+    ClearWindow(stdscr,' ');
+    attron(A_BOLD);
+    mvprintw((getmaxy(stdscr)/2)-(MATRIXHEIGHT/2)+NEXTWINDOWHEIGHT+2*DISTANCE+SCOREWINDOWHEIGHT, getmaxx(stdscr)/2+DISTANCE+5, "Press p to pause");
+    attroff(A_BOLD);
+    refresh();
+
+    matrix=getwin(matrixFile);
+    nextWin=getwin(nextWinFile);
+    scoreWin=getwin(scoreWinFile);
+
+    wrefresh(matrix);
+    wrefresh(nextWin);
+    wrefresh(scoreWin);
+
+    fclose(matrixFile);
+    fclose(nextWinFile);
+    fclose(scoreWinFile);
 
 }
 
@@ -68,4 +119,7 @@ void InitColors()
     init_pair(7, COLOR_GREEN, COLOR_BLACK);
     init_pair(8, COLOR_WHITE, COLOR_BLACK);
     init_pair(9, COLOR_CYAN, COLOR_BLUE);
+    init_pair(10, COLOR_BLACK, COLOR_BLACK);
+    init_pair(11, COLOR_RED, COLOR_RED);
+    init_pair(12, COLOR_YELLOW, COLOR_RED);
 }

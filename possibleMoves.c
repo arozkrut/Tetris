@@ -142,6 +142,7 @@ bool CheckIfPossible(short int block, int blockY, int blockX, int position, int 
  */
 bool I1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX<=10 && blockY>=0 && blockY+3<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+2)*ELINROW)+blockX);
@@ -155,6 +156,7 @@ bool I1(int blockY, int blockX, int *tmatrix)
  */
 bool I2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+3<=10 && blockY>=0 && blockY<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+(blockY*ELINROW)+blockX+2);
@@ -170,6 +172,7 @@ bool I2(int blockY, int blockX, int *tmatrix)
  */
 bool J1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX);
@@ -184,6 +187,7 @@ bool J1(int blockY, int blockX, int *tmatrix)
  */
 bool J2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+(blockY*ELINROW)+blockX+2);
@@ -199,6 +203,7 @@ bool J2(int blockY, int blockX, int *tmatrix)
  */
 bool J3(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
     int square3=*(tmatrix+((blockY+2)*ELINROW)+blockX);
@@ -213,6 +218,7 @@ bool J3(int blockY, int blockX, int *tmatrix)
  */
 bool J4(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -228,6 +234,7 @@ bool J4(int blockY, int blockX, int *tmatrix)
  */
 bool L1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -242,6 +249,7 @@ bool L1(int blockY, int blockX, int *tmatrix)
  */
 bool L2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+2);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -257,6 +265,7 @@ bool L2(int blockY, int blockX, int *tmatrix)
  */
 bool L3(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+2)*ELINROW)+blockX);
@@ -271,6 +280,7 @@ bool L3(int blockY, int blockX, int *tmatrix)
  */
 bool L4(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+(blockY*ELINROW)+blockX+2);
@@ -285,6 +295,7 @@ bool L4(int blockY, int blockX, int *tmatrix)
  */
 bool T1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -300,6 +311,7 @@ bool T1(int blockY, int blockX, int *tmatrix)
  */
 bool T2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -314,6 +326,7 @@ bool T2(int blockY, int blockX, int *tmatrix)
  */
 bool T3(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+(blockY*ELINROW)+blockX+2);
@@ -329,6 +342,7 @@ bool T3(int blockY, int blockX, int *tmatrix)
  */
 bool T4(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -357,6 +371,7 @@ bool O1(int blockY, int blockX, int *tmatrix)
  */
 bool S1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+2);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX);
@@ -372,6 +387,7 @@ bool S1(int blockY, int blockX, int *tmatrix)
  */
 bool S2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -386,6 +402,7 @@ bool S2(int blockY, int blockX, int *tmatrix)
  */
 bool Z1(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+2<=10 && blockY>=0 && blockY+1<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX);
     int square2=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);
@@ -401,6 +418,7 @@ bool Z1(int blockY, int blockX, int *tmatrix)
  */
 bool Z2(int blockY, int blockX, int *tmatrix)
 {
+    if(!(blockX>=1 && blockX+1<=10 && blockY>=0 && blockY+2<20))return false;
     int square1=*(tmatrix+(blockY*ELINROW)+blockX+1);
     int square2=*(tmatrix+((blockY+1)*ELINROW)+blockX);
     int square3=*(tmatrix+((blockY+1)*ELINROW)+blockX+1);

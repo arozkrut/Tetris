@@ -170,6 +170,7 @@ void Changetmatrix(short int block, int blockY, int blockX, int position, int *t
             *(tmatrix+(blockY*ELINROW)+blockX+1)=value;
             *(tmatrix+((blockY+1)*ELINROW)+blockX)=value;
             *(tmatrix+((blockY+1)*ELINROW)+blockX+1)=value;
+            break;
         }
         case 5:
         {

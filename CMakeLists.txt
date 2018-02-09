@@ -8,6 +8,6 @@ set(CMAKE_C_FLAGS "-lncurses")
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 
-add_executable(Tetris main.c tetris.h randomBlocks.c menu.c display.c windows.c gameplay.c possibleMoves.c drawing.c matrix.c)
+add_executable(Tetris main.c tetris.h randomBlocks.c menu.c display.c windows.c gameplay.c possibleMoves.c drawing.c matrix.c rotation.c countingPoints.c ranking.c)
 
 target_link_libraries(Tetris ${CURSES_LIBRARIES})

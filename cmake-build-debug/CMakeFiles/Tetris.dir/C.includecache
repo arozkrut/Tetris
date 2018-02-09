@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
@@ -38,6 +42,14 @@ tetris.h
 tetris.h
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c
+tetris.h
+/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
+
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h
 stdio.h
 -
@@ -48,6 +60,8 @@ stdlib.h
 ncurses.h
 -
 stdbool.h
+-
+string.h
 -
 
 /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/windows.c

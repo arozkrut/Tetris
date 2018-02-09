@@ -15,22 +15,22 @@
 
 void Display()
 {
-    initscr();
-    start_color();
+    initscr();                /* rozpoczecie trybu ncurses */
+    start_color();            /* zmiana opcji ncurses */
     clear();
     noecho();
     cbreak();
     curs_set(0);
     keypad(stdscr, TRUE);
 
-    InitColors();
+    InitColors();             /* funcja deklarujaca pary kolorow */
     attron(COLOR_PAIR(9));
 
     ClearWindow(stdscr, ACS_DIAMOND);
     refresh();
 
     short int option=1;
-    while(option!=-1)
+    while(option!=-1)                         /* kiedy option przyjmie wartosc -1 konczymy program */
     {
         switch(option)
         {
@@ -41,26 +41,27 @@ void Display()
             }
             case 2:
             {
-                attron(COLOR_PAIR(8));
-                ClearWindow(stdscr, ' ');
+                attron(COLOR_PAIR(8));        /* zmiana kolorow */
+                ClearWindow(stdscr, ' ');     /* i wywolanie funkcji NewGame() */
                 option=NewGame();
-                attron(COLOR_PAIR(9));
-                cbreak();
+                attron(COLOR_PAIR(9));        /* powrot do standardowych kolorow */
+
                 break;
             }
             case 3:
             {
-
+                attron(COLOR_PAIR(12));       /* zmiana kolorow */
+                ClearWindow(stdscr, ACS_DIAMOND);
+                WriteRanking();
+                option=1;
+                attron(COLOR_PAIR(9));        /* powrot do standardowych kolorow */
             }
         }
 
         ClearWindow(stdscr, ACS_DIAMOND);
-
+        refresh();
     }
 
-    //mvaddch(i,j,ACS_CKBOARD);
-
-    //clrtoeol();
     refresh();
     endwin();
 

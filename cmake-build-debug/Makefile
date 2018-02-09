@@ -123,6 +123,33 @@ Tetris/fast:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/build
 .PHONY : Tetris/fast
 
+countingPoints.o: countingPoints.c.o
+
+.PHONY : countingPoints.o
+
+# target to build an object file
+countingPoints.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/countingPoints.c.o
+.PHONY : countingPoints.c.o
+
+countingPoints.i: countingPoints.c.i
+
+.PHONY : countingPoints.i
+
+# target to preprocess a source file
+countingPoints.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/countingPoints.c.i
+.PHONY : countingPoints.c.i
+
+countingPoints.s: countingPoints.c.s
+
+.PHONY : countingPoints.s
+
+# target to generate assembly for a file
+countingPoints.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/countingPoints.c.s
+.PHONY : countingPoints.c.s
+
 display.o: display.c.o
 
 .PHONY : display.o
@@ -339,6 +366,60 @@ randomBlocks.c.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/randomBlocks.c.s
 .PHONY : randomBlocks.c.s
 
+ranking.o: ranking.c.o
+
+.PHONY : ranking.o
+
+# target to build an object file
+ranking.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ranking.c.o
+.PHONY : ranking.c.o
+
+ranking.i: ranking.c.i
+
+.PHONY : ranking.i
+
+# target to preprocess a source file
+ranking.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ranking.c.i
+.PHONY : ranking.c.i
+
+ranking.s: ranking.c.s
+
+.PHONY : ranking.s
+
+# target to generate assembly for a file
+ranking.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ranking.c.s
+.PHONY : ranking.c.s
+
+rotation.o: rotation.c.o
+
+.PHONY : rotation.o
+
+# target to build an object file
+rotation.c.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/rotation.c.o
+.PHONY : rotation.c.o
+
+rotation.i: rotation.c.i
+
+.PHONY : rotation.i
+
+# target to preprocess a source file
+rotation.c.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/rotation.c.i
+.PHONY : rotation.c.i
+
+rotation.s: rotation.c.s
+
+.PHONY : rotation.s
+
+# target to generate assembly for a file
+rotation.c.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/rotation.c.s
+.PHONY : rotation.c.s
+
 windows.o: windows.c.o
 
 .PHONY : windows.o
@@ -375,6 +456,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Tetris"
+	@echo "... countingPoints.o"
+	@echo "... countingPoints.i"
+	@echo "... countingPoints.s"
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
@@ -399,6 +483,12 @@ help:
 	@echo "... randomBlocks.o"
 	@echo "... randomBlocks.i"
 	@echo "... randomBlocks.s"
+	@echo "... ranking.o"
+	@echo "... ranking.i"
+	@echo "... ranking.s"
+	@echo "... rotation.o"
+	@echo "... rotation.i"
+	@echo "... rotation.s"
 	@echo "... windows.o"
 	@echo "... windows.i"
 	@echo "... windows.s"

@@ -4,37 +4,172 @@
 
 #include "tetris.h"
 
-void DrawI1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawI2(WINDOW *win, int blockY, int blockX, const chtype character);
 
-void DrawJ1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawJ2(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawJ3(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawJ4(WINDOW *win, int blockY, int blockX, const chtype character);
+/*
+ * X
+ * X
+ * X
+ * X
+ */
 
-void DrawL1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawL2(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawL3(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawL4(WINDOW *win, int blockY, int blockX, const chtype character);
+/*
+ * XXXX
+ */
 
-void DrawT1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawT2(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawT3(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawT4(WINDOW *win, int blockY, int blockX, const chtype character);
 
-void DrawO1(WINDOW *win, int blockY, int blockX, const chtype character);
+/*
+ * XX
+ * X
+ * X
+ */
 
-void DrawS1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawS2(WINDOW *win, int blockY, int blockX, const chtype character);
-
-void DrawZ1(WINDOW *win, int blockY, int blockX, const chtype character);
-void DrawZ2(WINDOW *win, int blockY, int blockX, const chtype character);
+/*
+ * XXX
+ *   X
+ */
 
 
 
-void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int position, const chtype character)
+/*
+ *  X
+ *  X
+ * XX
+ */
+
+
+
+/*
+ * X
+ * XXX
+ */
+
+
+
+/*
+ * XX
+ *  X
+ *  X
+ */
+
+
+/*
+ *   X
+ * XXX
+ */
+
+
+/*
+ * X
+ * X
+ * XX
+ */
+
+/*
+ * XXX
+ * X
+ */
+
+
+/*
+ *  X
+ * XXX
+ */
+
+
+/*
+ * X
+ * XX
+ * X
+ */
+
+
+/*
+ * XXX
+ *  X
+ */
+
+/*
+ *  X
+ * XX
+ *  X
+ */
+
+
+/*
+ * XX
+ * XX
+ */
+
+
+
+/*
+ *  XX
+ * XX
+ */
+
+
+/*
+ * X
+ * XX
+ *  X
+ */
+
+
+/*
+ * XX
+ *  XX
+ */
+
+/*
+ *  X
+ * XX
+ * X
+ */
+
+int BlockHeight(short int block, int position); /* zwraca wysokosc klocka */
+
+/*
+ * Draw rysuje klocki
+ * win - okno gdzie rysujemy
+ * blockY? blockX? wspolrzedne do rysowania
+ * character - jakim znakiem rysujemy
+ * color - ktory kolor
+ */
+void Draw(WINDOW *win, int blockY1, int blockX1, int blockY2, int blockX2, int blockY3, int blockX3, int blockY4, int blockX4, const chtype character, short int color)
 {
-    switch(block)
+    --blockX1;
+    --blockX2;
+    --blockX3;
+    --blockX4;
+
+    wattron(win, COLOR_PAIR(color));
+    wattron(win, A_BOLD);
+
+    mvwaddch(win,blockY1+1,2*blockX1+1,character);
+    mvwaddch(win,blockY1+1,2*blockX1+2,character);
+
+    mvwaddch(win,blockY2+1,2*blockX2+1,character);
+    mvwaddch(win,blockY2+1,2*blockX2+2,character);
+
+    mvwaddch(win,blockY3+1,2*blockX3+1,character);
+    mvwaddch(win,blockY3+1,2*blockX3+2,character);
+
+    mvwaddch(win,blockY4+1,2*blockX4+1,character);
+    mvwaddch(win,blockY4+1,2*blockX4+2,character);
+
+    wrefresh(win);
+}
+
+
+
+void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int position, const chtype character, bool shadow)
+{
+    short int color;
+
+    if(shadow)color=10;                             /* ustawienie koloru do rysowania */
+    else color=block+1;
+
+    switch(block)                                   /* wywolujemy odpowiednia funkcje dla kazdego bloku i jego katu */
     {
         case 0:
         {
@@ -42,22 +177,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawI1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+2, blockX, blockY+3, blockX, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawI2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY, blockX+2, blockY, blockX+3, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawI1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+2, blockX, blockY+3, blockX, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawI2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY, blockX+2, blockY, blockX+3, character, color);
                     break;
                 }
             }
@@ -69,22 +204,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawJ1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY+1, blockX, blockY+2, blockX, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawJ2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY, blockX+2, blockY+1, blockX+2, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawJ3(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY+1, blockX+1, blockY+2, blockX, blockY+2, blockX+1, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawJ4(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+1, blockX+1, blockY+1, blockX+2, character, color);
                     break;
                 }
             }
@@ -96,22 +231,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawL1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY+1, blockX+1, blockY+2, blockX+1, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawL2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+2, blockY+1, blockX, blockY+1, blockX+1, blockY+1, blockX+2, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawL3(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+2, blockX, blockY+2, blockX+1, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawL4(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY, blockX+2, blockY+1, blockX, character, color);
                     break;
                 }
             }
@@ -123,22 +258,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawT1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY+1, blockX, blockY+1, blockX+1, blockY+1, blockX+2, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawT2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawT3(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY, blockX+2, blockY+1, blockX+1, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawT4(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX+1, character, color);
                     break;
                 }
             }
@@ -146,29 +281,7 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
         }
         case 4:
         {
-            switch(position)
-            {
-                case 1:
-                {
-                    DrawO1(win, blockY, blockX, character);
-                    break;
-                }
-                case 2:
-                {
-                    DrawO1(win, blockY, blockX, character);
-                    break;
-                }
-                case 3:
-                {
-                    DrawO1(win, blockY, blockX, character);
-                    break;
-                }
-                case 4:
-                {
-                    DrawO1(win, blockY, blockX, character);
-                    break;
-                }
-            }
+            Draw(win, blockY, blockX, blockY, blockX+1, blockY+1, blockX, blockY+1, blockX+1, character, color);
             break;
         }
         case 5:
@@ -177,22 +290,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawS1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY, blockX+2, blockY+1, blockX, blockY+1, blockX+1, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawS2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX+1, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawS1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY, blockX+2, blockY+1, blockX, blockY+1, blockX+1, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawS2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX+1, character, color);
                     break;
                 }
             }
@@ -204,22 +317,22 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
             {
                 case 1:
                 {
-                    DrawZ1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY+1, blockX+1, blockY+1, blockX+2, character, color);
                     break;
                 }
                 case 2:
                 {
-                    DrawZ2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX, character, color);
                     break;
                 }
                 case 3:
                 {
-                    DrawZ1(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX, blockY, blockX+1, blockY+1, blockX+1, blockY+1, blockX+2, character, color);
                     break;
                 }
                 case 4:
                 {
-                    DrawZ2(win, blockY, blockX, character);
+                    Draw(win, blockY, blockX+1, blockY+1, blockX, blockY+1, blockX+1, blockY+2, blockX, character, color);
                     break;
                 }
             }
@@ -228,473 +341,96 @@ void DrawBlock(WINDOW *win, short int block, int blockY, int blockX, int positio
     }
 }
 
-/*
- * X
- * X
- * X
- * X
- */
-void DrawI1(WINDOW *win, int blockY, int blockX, const chtype character)
+
+
+void UpdateNextWin(WINDOW *nextWin, short int nextBlock)
 {
-    wattron(win, COLOR_PAIR(1));
+    int blockX;
+    int blockY=1;
+    int position;
 
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
+    /* czyscimy okno bez krawedzi */
+    for(int i=2;i<NEXTWINDOWHEIGHT-1;++i)for(int j=1;j<NEXTWINDOWWIDTH-1;++j)mvwaddch(nextWin,i,j,' ');
 
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
+    if(nextBlock==0)                  /* obliczamy wspolrzedne do rysowania w zaleznosci od klocka i katu */
+    {
+        ++blockY;
+        blockX=(NEXTWINDOWWIDTH)/4-1;
+        position=2;
+    }
+    else if(nextBlock==3)
+    {
+        position=2;
+        blockX=NEXTWINDOWWIDTH/4;
+    }
+    else if(nextBlock==5 || nextBlock==6)
+    {
+        position=2;
+        blockX=(NEXTWINDOWWIDTH)/4;
+    }
+    else if(nextBlock==4)
+    {
+        ++blockY;
+        position=1;
+        blockX=(NEXTWINDOWWIDTH)/4;
+    }
+    else
+    {
+        position=1;
+        blockX=(NEXTWINDOWWIDTH)/4;
+    }
 
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    mvwaddch(win,blockY+4,2*blockX,character);
-    mvwaddch(win,blockY+4,2*blockX+1,character);
-
-    wrefresh(win);
+    DrawBlock(nextWin, nextBlock, blockY, blockX, position, ACS_CKBOARD, false);
 }
 
 
-/*
- * XXXX
- */
-void DrawI2(WINDOW *win, int blockY, int blockX, const chtype character)
+void DrawMatrix(WINDOW *matrix,int *tmatrix)
 {
-    wattron(win, COLOR_PAIR(1));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+1,2*blockX+6,character);
-    mvwaddch(win,blockY+1,2*blockX+7,character);
-
-    wrefresh(win);
+    for(int i=0;i<20;++i)
+    {
+        for(int j=1;j<=10;++j)
+        {
+            if(*(tmatrix+i*ELINROW+j)==0)
+            {
+                mvwaddch(matrix, i+1, 2*(j-1)+1, ' ');
+                mvwaddch(matrix, i+1, 2*(j-1)+2, ' ');
+            }
+            else
+            {
+                wattron(matrix, COLOR_PAIR(*(tmatrix+i*ELINROW+j)));
+                mvwaddch(matrix, i+1, 2*(j-1)+1, ACS_CKBOARD);
+                mvwaddch(matrix, i+1, 2*(j-1)+2, ACS_CKBOARD);
+            }
+        }
+    }
+    wrefresh(matrix);
 }
 
-
-/*
- * XX
- * X
- * X
- */
-void DrawJ1(WINDOW *win, int blockY, int blockX, const chtype character)
+void FindShadow(WINDOW *matrix, short int block, int blockY, int blockX, int position, int *shadowY, int *tmatrix)
 {
-    wattron(win, COLOR_PAIR(2));
+    bool found=false;
 
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
+    for(int i=blockY+BlockHeight(block, position)+1; i<=20; ++i)             /* szukamy najwiekszej wspolrzednej Y */
+    {                                                                        /* dla ktorej da sie narysowac cien klocka */
+        if(CheckIfPossible(block, i, blockX, position, tmatrix))found=true;  /* cien da sie narysowac */
+        else
+        {
+            *shadowY=i-1;                                                    /* i jest juz niedobre wiec i-1 */
+            break;                                                           /* jest najwieksza wspolrzedna */
+        }
+    }
 
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
+    if(!found)*shadowY=-1;                                                   /* nie mozna narysowac czyli cien nie istnieje */
 
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    wrefresh(win);
+    /* da sie narysowac i rysujemy */
+    else DrawBlock(matrix, block, *shadowY, blockX, position, ACS_CKBOARD, true);
 }
 
-/*
- * XXX
- *   X
- */
-void DrawJ2(WINDOW *win, int blockY, int blockX, const chtype character)
+int BlockHeight(short int block, int position)
 {
-    wattron(win, COLOR_PAIR(2));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+2,2*blockX+4,character);
-    mvwaddch(win,blockY+2,2*blockX+5,character);
-
-    wrefresh(win);
+    if(block==0 && position%2==1)return 4;
+    if(block==0)return 1;
+    if((block==1 || block==2) && position%2==1)return 3;
+    if(block==1 || block==2 || block==4 || position%2==1)return 2;
+    return 3;
 }
-
-/*
- *  X
- *  X
- * XX
- */
-void DrawJ3(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(2));
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    mvwaddch(win,blockY+3,2*blockX+2,character);
-    mvwaddch(win,blockY+3,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-/*
- * X
- * XXX
- */
-void DrawJ4(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(2));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+4,character);
-    mvwaddch(win,blockY+2,2*blockX+5,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * XX
- *  X
- *  X
- */
-
-void DrawL1(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(3));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX+2,character);
-    mvwaddch(win,blockY+3,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-/*
- *   X
- * XXX
- */
-
-void DrawL2(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(3));
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+4,character);
-    mvwaddch(win,blockY+2,2*blockX+5,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * X
- * X
- * XX
- */
-
-void DrawL3(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(3));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    mvwaddch(win,blockY+3,2*blockX+2,character);
-    mvwaddch(win,blockY+3,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * XXX
- * X
- */
-
-void DrawL4(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(3));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    wrefresh(win);
-}
-
-/*
- *  X
- * XXX
- */
-
-void DrawT1(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(4));
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+4,character);
-    mvwaddch(win,blockY+2,2*blockX+5,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * X
- * XX
- * X
- */
-
-void DrawT2(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(4));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * XXX
- *  X
- */
-
-void DrawT3(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(4));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- *  X
- * XX
- *  X
- */
-
-void DrawT4(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(4));
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX+2,character);
-    mvwaddch(win,blockY+3,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * XX
- * XX
- */
-
-void DrawO1(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(5));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- *  XX
- * XX
- */
-
-void DrawS1(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(6));
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+1,2*blockX+4,character);
-    mvwaddch(win,blockY+1,2*blockX+5,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * X
- * XX
- *  X
- */
-
-void DrawS2(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(6));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX+2,character);
-    mvwaddch(win,blockY+3,2*blockX+3,character);
-
-    wrefresh(win);
-}
-
-
-/*
- * XX
- *  XX
- */
-
-void DrawZ1(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(7));
-
-    mvwaddch(win,blockY+1,2*blockX,character);
-    mvwaddch(win,blockY+1,2*blockX+1,character);
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX+4,character);
-    mvwaddch(win,blockY+2,2*blockX+5,character);
-
-    wrefresh(win);
-}
-
-/*
- *  X
- * XX
- * X
- */
-void DrawZ2(WINDOW *win, int blockY, int blockX, const chtype character)
-{
-    wattron(win, COLOR_PAIR(7));
-
-    mvwaddch(win,blockY+1,2*blockX+2,character);
-    mvwaddch(win,blockY+1,2*blockX+3,character);
-
-    mvwaddch(win,blockY+2,2*blockX,character);
-    mvwaddch(win,blockY+2,2*blockX+1,character);
-
-    mvwaddch(win,blockY+2,2*blockX+2,character);
-    mvwaddch(win,blockY+2,2*blockX+3,character);
-
-    mvwaddch(win,blockY+3,2*blockX,character);
-    mvwaddch(win,blockY+3,2*blockX+1,character);
-
-    wrefresh(win);
-}
-

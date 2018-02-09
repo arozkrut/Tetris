@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c">
 			<Option target="Tetris"/>
 		</Unit>
@@ -100,6 +103,12 @@
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomBlocks.c">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c">
 			<Option target="Tetris"/>
 		</Unit>
 		<Unit filename="/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/tetris.h">

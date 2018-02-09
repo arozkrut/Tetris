@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/countingPoints.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/display.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/display.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/drawing.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/drawing.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/gameplay.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/gameplay.c.o"
@@ -12,6 +13,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/menu.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/menu.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/possibleMoves.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/possibleMoves.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/randomBlocks.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/randomBlocks.c.o"
+  "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/ranking.c.o"
+  "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/rotation.c.o"
   "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/windows.c" "/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/windows.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

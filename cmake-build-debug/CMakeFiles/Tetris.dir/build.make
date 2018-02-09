@@ -273,6 +273,78 @@ CMakeFiles/Tetris.dir/matrix.c.o.provides: CMakeFiles/Tetris.dir/matrix.c.o.requ
 CMakeFiles/Tetris.dir/matrix.c.o.provides.build: CMakeFiles/Tetris.dir/matrix.c.o
 
 
+CMakeFiles/Tetris.dir/rotation.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/rotation.c.o: ../rotation.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Tetris.dir/rotation.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/rotation.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c
+
+CMakeFiles/Tetris.dir/rotation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/rotation.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c > CMakeFiles/Tetris.dir/rotation.c.i
+
+CMakeFiles/Tetris.dir/rotation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/rotation.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/rotation.c -o CMakeFiles/Tetris.dir/rotation.c.s
+
+CMakeFiles/Tetris.dir/rotation.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/rotation.c.o.requires
+
+CMakeFiles/Tetris.dir/rotation.c.o.provides: CMakeFiles/Tetris.dir/rotation.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/rotation.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/rotation.c.o.provides
+
+CMakeFiles/Tetris.dir/rotation.c.o.provides.build: CMakeFiles/Tetris.dir/rotation.c.o
+
+
+CMakeFiles/Tetris.dir/countingPoints.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/countingPoints.c.o: ../countingPoints.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Tetris.dir/countingPoints.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/countingPoints.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c
+
+CMakeFiles/Tetris.dir/countingPoints.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/countingPoints.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c > CMakeFiles/Tetris.dir/countingPoints.c.i
+
+CMakeFiles/Tetris.dir/countingPoints.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/countingPoints.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/countingPoints.c -o CMakeFiles/Tetris.dir/countingPoints.c.s
+
+CMakeFiles/Tetris.dir/countingPoints.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/countingPoints.c.o.requires
+
+CMakeFiles/Tetris.dir/countingPoints.c.o.provides: CMakeFiles/Tetris.dir/countingPoints.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/countingPoints.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/countingPoints.c.o.provides
+
+CMakeFiles/Tetris.dir/countingPoints.c.o.provides.build: CMakeFiles/Tetris.dir/countingPoints.c.o
+
+
+CMakeFiles/Tetris.dir/ranking.c.o: CMakeFiles/Tetris.dir/flags.make
+CMakeFiles/Tetris.dir/ranking.c.o: ../ranking.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Tetris.dir/ranking.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tetris.dir/ranking.c.o   -c /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c
+
+CMakeFiles/Tetris.dir/ranking.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tetris.dir/ranking.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c > CMakeFiles/Tetris.dir/ranking.c.i
+
+CMakeFiles/Tetris.dir/ranking.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tetris.dir/ranking.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/ranking.c -o CMakeFiles/Tetris.dir/ranking.c.s
+
+CMakeFiles/Tetris.dir/ranking.c.o.requires:
+
+.PHONY : CMakeFiles/Tetris.dir/ranking.c.o.requires
+
+CMakeFiles/Tetris.dir/ranking.c.o.provides: CMakeFiles/Tetris.dir/ranking.c.o.requires
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ranking.c.o.provides.build
+.PHONY : CMakeFiles/Tetris.dir/ranking.c.o.provides
+
+CMakeFiles/Tetris.dir/ranking.c.o.provides.build: CMakeFiles/Tetris.dir/ranking.c.o
+
+
 # Object files for target Tetris
 Tetris_OBJECTS = \
 "CMakeFiles/Tetris.dir/main.c.o" \
@@ -283,7 +355,10 @@ Tetris_OBJECTS = \
 "CMakeFiles/Tetris.dir/gameplay.c.o" \
 "CMakeFiles/Tetris.dir/possibleMoves.c.o" \
 "CMakeFiles/Tetris.dir/drawing.c.o" \
-"CMakeFiles/Tetris.dir/matrix.c.o"
+"CMakeFiles/Tetris.dir/matrix.c.o" \
+"CMakeFiles/Tetris.dir/rotation.c.o" \
+"CMakeFiles/Tetris.dir/countingPoints.c.o" \
+"CMakeFiles/Tetris.dir/ranking.c.o"
 
 # External object files for target Tetris
 Tetris_EXTERNAL_OBJECTS =
@@ -297,11 +372,14 @@ Tetris: CMakeFiles/Tetris.dir/gameplay.c.o
 Tetris: CMakeFiles/Tetris.dir/possibleMoves.c.o
 Tetris: CMakeFiles/Tetris.dir/drawing.c.o
 Tetris: CMakeFiles/Tetris.dir/matrix.c.o
+Tetris: CMakeFiles/Tetris.dir/rotation.c.o
+Tetris: CMakeFiles/Tetris.dir/countingPoints.c.o
+Tetris: CMakeFiles/Tetris.dir/ranking.c.o
 Tetris: CMakeFiles/Tetris.dir/build.make
 Tetris: /usr/lib/x86_64-linux-gnu/libcurses.so
 Tetris: /usr/lib/x86_64-linux-gnu/libform.so
 Tetris: CMakeFiles/Tetris.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable Tetris"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aleksandra/Dokumenty/Studia1/ProjektC/Tetris/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable Tetris"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tetris.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -318,6 +396,9 @@ CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/gameplay.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/possibleMoves.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/drawing.c.o.requires
 CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/matrix.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/rotation.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/countingPoints.c.o.requires
+CMakeFiles/Tetris.dir/requires: CMakeFiles/Tetris.dir/ranking.c.o.requires
 
 .PHONY : CMakeFiles/Tetris.dir/requires
 
